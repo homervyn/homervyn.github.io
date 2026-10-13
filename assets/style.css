@@ -35,7 +35,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font: 1.0625rem/1.65 var(--sans);
+  font: 1rem/1.65 var(--sans);
   text-rendering: optimizeLegibility;
 }
 
@@ -134,7 +134,7 @@ p { margin: 0 0 1rem; text-wrap: pretty; }
 }
 .paper h3 { margin: 0 0 0.35rem; }
 .paper .with { margin: 0 0 0.8rem; color: var(--muted); }
-.paper .abstract { margin: 0; max-width: 68ch; }
+.paper .abstract { margin: 0; max-width: 66ch; font-size: 0.95rem; line-height: 1.6; }
 .paper .links { margin: 0.9rem 0 0; font-weight: 600; }
 
 /* CV */
@@ -156,7 +156,7 @@ p { margin: 0 0 1rem; text-wrap: pretty; }
 .foot .wrap { padding-block: 1.25rem 2rem; }
 
 @media (max-width: 40rem) {
-  body { font-size: 1.03rem; }
+  body { font-size: 1rem; }
   h1 { font-size: 1.85rem; }
   .hero { grid-template-columns: 1fr; gap: 1.5rem; }
   .portrait { order: -1; width: 11rem; }
