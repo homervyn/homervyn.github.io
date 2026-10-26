@@ -100,8 +100,12 @@ td.na { color: var(--ink2); }
 .dim .dot { opacity: .4; }
 [hidden] { display: none !important; }
 .dot { vector-effect: non-scaling-stroke; }
-.back { margin: 0 0 6px; font-size: .9rem; }
-.back a { color: var(--link); text-underline-offset: 2px; }
+.sitenav { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 18px; margin: 0 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--line); font-size: .92rem; }
+.sitenav .brand { font-weight: 600; font-size: 1.05rem; color: var(--ink); text-decoration: none; }
+.sitenav span { display: flex; flex-wrap: wrap; gap: 4px 18px; }
+.sitenav span a { color: var(--ink2); text-decoration: none; padding-block: 2px; border-bottom: 2px solid transparent; }
+.sitenav span a:hover { color: var(--ink); }
+.sitenav span a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--link); }
 .pfoot { border-top: 1px solid var(--line); padding-top: 12px; color: var(--ink2); font-size: .82rem; max-width: 86ch; }
 .pfoot p { margin: 0 0 6px; }
 .pfoot a { color: var(--link); }
@@ -186,7 +190,7 @@ details.sub2 > summary { cursor: pointer; font-weight: 500; padding: 4px 0; }
 
 <div id="app">
   <header>
-    <p class="back"><a href="../index.html">&larr; Ming-Yen Ho</a></p>
+    <nav class="sitenav" aria-label="Main"><a class="brand" href="../index.html">Ming-Yen Ho</a><span><a href="../index.html">Home</a><a href="../research.html">Research</a><a href="../cv.html">CV</a><a href="./" aria-current="page">Chip Map</a></span></nav>
     <h1>China semiconductor supply-chain map</h1>
     <p class="lede">Listed Chinese firms in semiconductor equipment, materials, chip design and devices, fabrication, packaging and test. Search a firm or toggle sectors to find them on the map, then click a dot for process-node progress, financials, output and filing evidence.</p>
   </header>
