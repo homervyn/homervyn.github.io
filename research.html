@@ -83,5 +83,27 @@
   <footer class="foot">
     <div class="wrap">&copy; 2026 Ming-Yen Ho &middot; Last updated October 2026</div>
   </footer>
+
+  <script>
+    // Paper abstracts start collapsed; each gets a button that shows or hides it.
+    // Without JavaScript the abstracts stay visible. The Data section is left as is.
+    document.querySelectorAll('section:not([aria-labelledby="data-h"]) .paper .abstract').forEach(function (p) {
+      var id = p.closest('.paper').id + '-abstract';
+      p.id = id;
+      p.hidden = true;
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'abstract-toggle';
+      b.setAttribute('aria-expanded', 'false');
+      b.setAttribute('aria-controls', id);
+      b.textContent = 'Abstract';
+      b.addEventListener('click', function () {
+        var open = b.getAttribute('aria-expanded') === 'true';
+        b.setAttribute('aria-expanded', String(!open));
+        p.hidden = open;
+      });
+      p.parentNode.insertBefore(b, p);
+    });
+  </script>
 </body>
 </html>
